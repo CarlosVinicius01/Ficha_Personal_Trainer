@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha para Personal Trainer</title>
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/scripts/index.js" defer type="module"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text" id="title">Ficha de Anamnese</h1>
+        <p id="cref">CREF XXXXXX-X/XX</p>
+        <p class="p-step" id="step-text"></p>
+
+        <!-- PRIMEIRO FORMULÁRIO -->
+        <form id="form-step-1" class="step one"> 
+            <div class="form-row">
+                <div class="input-data floating">
+                    <input type="text" required id="nome" placeholder=" ">
+                    <div class="underline"></div>
+                    <label for="">Nome Completo *</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data floating">
+                    <input type="text" required id="dataNascimento" placeholder=" " maxlength="10">
+                    <div class="underline"></div>
+                    <label for="">Data de Nascimento *</label>
+                </div>
+                <div class="input-data floating">
+                    <input type="text" required id="endereco" placeholder=" ">
+                    <div class="underline"></div>
+                    <label for="">Endereço *</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data floating">
+                    <input type="tel" required id="telefone" placeholder=" " maxlength="15">
+                    <div class="underline"></div>
+                    <label for="">Telefone *</label>
+                </div>
+                <div class="input-data floating">
+                    <input type="text" required id="instagram" placeholder=" ">
+                    <div class="underline"></div>
+                    <label for="">Instagram *</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data floating" >
+                    <input type="number" id="weight"  min="0" max="300" placeholder=" " required>
+                    <div class="underline"></div>
+                    <label for="">Peso (kg) *</label>
+                </div>
+                <div class="input-data floating">
+                    <input type="number" id="height" min="0" max="250" placeholder=" " required>
+                    <div class="underline"></div>
+                    <label for="">Altura (cm) *</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data floating">
+                    <input type="text" required id="objective" placeholder=" ">
+                    <div class="underline"></div>
+                    <label for="">Objetivo *</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data floating">
+                    <input type="text" id="bodyBothers" placeholder=" " required>
+                    <div class="underline"></div>
+                    <label for="">Qual parte do seu corpo mais te incomoda?</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data floating">
+                    <input type="text" id="standingHours" placeholder=" " required>
+                    <div class="underline"></div>
+                    <label for="">Passa quanto tempo do seu dia em pé?</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data floating">
+                    <input type="text" id="hoursSlept" placeholder=" " required>
+                    <div class="underline"></div>
+                    <label for="">Dorme quantas horas por noite?</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Possui alguma lesão musculoesquelética? Dos que envolvem músculos, ossos, articulações, tendões ou ligamentos? Se sim, descreva</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="a1-sim">
+                                <input type="radio" id="a1-sim" name="a1" value="Sim" required>
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="a1-nao">
+                                <input type="radio" id="a1-nao" name="a1" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="extra-input" id="a1-extra">
+                        <label for="a1-texto">Descreva:</label>
+                        <input type="text" id="a1-texto" name="a1-texto">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Pratica alguma atividade física?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="a2-sim">
+                                <input type="radio" id="a2-sim" name="a2" value="Sim" required>
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="a2-nao">
+                                <input type="radio" id="a2-nao" name="a2" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="extra-input" id="a2-extra">
+                        <label for="a2-texto">Qual:</label>
+                        <input type="text" id="a2-texto" name="a2-texto">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Faz uso de alguma suplementação? Se sim, quais?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="a3-sim">
+                                <input type="radio" id="a3-sim" name="a3" value="Sim" required>
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="a3-nao">
+                                <input type="radio" id="a3-nao" name="a3" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="extra-input" id="a3-extra">
+                        <label for="a3-texto">Quais:</label>
+                        <input type="text" id="a3-texto" name="a3-texto">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Faz acompanhamento nutricional? Se sim, há quanto tempo?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="a4-sim">
+                                <input type="radio" id="a4-sim" name="a4" value="Sim" required>
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="a4-nao">
+                                <input type="radio" id="a4-nao" name="a4" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="extra-input" id="a4-extra">
+                        <label for="a4-texto">Tempo:</label>
+                        <input type="text" id="a4-texto" name="a4-texto">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Faz uso de medicação controlada? Se sim, quais?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="a5-sim">
+                                <input type="radio" id="a5-sim" name="a5" value="Sim" required>
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="a5-nao">
+                                <input type="radio" id="a5-nao" name="a5" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="extra-input" id="a5-extra">
+                        <label for="a5-texto">Quais:</label>
+                        <input type="text" id="a5-texto" name="a5-texto">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Já foi obeso(a)?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="a6-sim">
+                                <input type="radio" id="a6-sim" name="a6" value="Sim" required>
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="a6-nao">
+                                <input type="radio" id="a6-nao" name="a6" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Cardíaco?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="a7-sim">
+                                <input type="radio" id="a7-sim" name="a7" value="Sim" required>
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="a7-nao">
+                                <input type="radio" id="a7-nao" name="a7" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Hipertenso?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="a8-sim">
+                                <input type="radio" id="a8-sim" name="a8" value="Sim" required>
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="a8-nao">
+                                <input type="radio" id="a8-nao" name="a8" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Diabético?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="a9-sim">
+                                <input type="radio" id="a9-sim" name="a9" value="Sim" required>
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="a9-nao">
+                                <input type="radio" id="a9-nao" name="a9" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Já passou por algum tipo de cirurgia? Se sim, qual?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="a10-sim">
+                                <input type="radio" id="a10-sim" name="a10" value="Sim" required>
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="a10-nao">
+                                <input type="radio" id="a10-nao" name="a10" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="extra-input" id="a10-extra">
+                        <label for="a10-texto">Qual:</label>
+                        <input type="text" id="a10-texto" name="a10-texto">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Faz algum tratamento psicológico ou psiquiátrico?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="a11-sim">
+                                <input type="radio" id="a11-sim" name="a11" value="Sim" required>
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="a11-nao">
+                                <input type="radio" id="a11-nao" name="a11" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Já fez acompanhamento com personal trainer antes? Se sim, por quanto tempo?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="a12-sim">
+                                <input type="radio" id="a12-sim" name="a12" value="Sim" required>
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="a12-nao">
+                                <input type="radio" id="a12-nao" name="a12" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="extra-input" id="a12-extra">
+                        <label for="a12-texto">Tempo:</label>
+                        <input type="text" id="a12-texto" name="a12-texto">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row submit-btn">
+                <div class="input-data">
+                    <div id="containerBtnFormOne" class="inner disabled"></div>
+                    <input id="btnFormOne" type="submit" value="Continuar" class="disabled" disabled>
+                </div>
+            </div>
+        </form>
+
+        <!-- SEGUNDO FORMULÁRIO -->
+        <form id="form-step-2" class="step two">
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Algum médico já disse que você possui algum problema de coração e que só deveria realizar atividade física supervisionado por profissionais de saúde?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="q1-sim">
+                                <input type="radio" id="q1-sim" name="q1" value="Sim">
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="q1-nao">
+                                <input type="radio" id="q1-nao" name="q1" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Você sente dores no peito quando pratica atividade física?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="q2-sim">
+                                <input type="radio" id="q2-sim" name="q2" value="Sim">
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="q2-nao">
+                                <input type="radio" id="q2-nao" name="q2" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>No último mês, você sentiu dores no peito quando praticou atividade física?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="q3-sim">
+                                <input type="radio" id="q3-sim" name="q3" value="Sim">
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="q3-nao">
+                                <input type="radio" id="q3-nao" name="q3" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Você apresenta desequilíbrio devido à tontura e/ ou perda de consciência?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="q4-sim">
+                                <input type="radio" id="q4-sim" name="q4" value="Sim">
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="q4-nao">
+                                <input type="radio" id="q4-nao" name="q4" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Você possui algum problema ósseo ou articular que poderia ser piorado pela atividade física?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="q5-sim">
+                                <input type="radio" id="q5-sim" name="q5" value="Sim">
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="q5-nao">
+                                <input type="radio" id="q5-nao" name="q5" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Você toma atualmente algum medicamento para pressão arterial e/ou problema de coração?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="q6-sim">
+                                <input type="radio" id="q6-sim" name="q6" value="Sim">
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="q6-nao">
+                                <input type="radio" id="q6-nao" name="q6" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-data">
+                    <p>Sabe de alguma outra razão pela qual você não deve praticar atividade física?</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <label for="q7-sim">
+                                <input type="radio" id="q7-sim" name="q7" value="Sim">
+                                <span class="custom-radio"></span>
+                                <span>Sim</span>
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <label for="q7-nao">
+                                <input type="radio" id="q7-nao" name="q7" value="Não">
+                                <span class="custom-radio"></span>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row submit-btn">
+                <div class="input-data">
+                    <div id="containerBtnFormTwo" class="inner disabled"></div>
+                    <input id="btnFormTwo" type="submit" value="Concluir" class="disabled">
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

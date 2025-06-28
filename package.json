@@ -1,0 +1,25 @@
+{
+  "name": "Ficha_Personal_Trainer",
+  "version": "1.0.0",
+  "description": "Projeto ficha de anamnese com backend serverless na Vercel",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node api/enviar-trello.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosVinicius01/Ficha_Personal_Trainer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosVinicius01/Ficha_Personal_Trainer/issues"
+  },
+  "homepage": "https://github.com/CarlosVinicius01/Ficha-Anamnese#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}

@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10px;
+    background: linear-gradient(115deg, #6696ff, #1001ea);
+}
+
+.container {
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 25px 40px 10px 40px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.text {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #6696ff;
+}
+
+#cref {
+    text-align: right;
+    font-weight: 500;
+}
+
+.p-step {
+    margin: 20px 0 0 20px;
+    color: #6696ff;
+}
+
+.form-row {
+    display: flex;
+    margin: 32px 0;
+}
+
+.input-data {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    position: relative;
+}
+
+.extra-input {
+    margin-top: 8px;
+    display: none;
+}
+
+.extra-input label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.extra-input.hidden {
+    display: none;
+}
+
+.input-data input[type="text"],
+.input-data input[type="tel"],
+.input-data input[type="number"],
+.input-data input[type="date"] {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+}
+
+.floating input:focus~label,
+.floating input:not(:placeholder-shown)~label {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #6696ff;
+}
+
+.floating label {
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.underline:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: #6696ff;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .3s ease;
+}
+
+.input-data input:focus~.underline:before,
+.input-data input:valid~.underline:before {
+    transform: scaleX(1);
+}
+
+.submit-btn .input-data {
+    overflow: hidden;
+    height: 30px;
+    width: 25%;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+
+.submit-btn .input-data .inner {
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    background: -webkit-linear-gradient(right, #6696ff, #1001ea, #6696ff, #1001ea);
+    transition: all 0.4s;
+}
+
+.submit-btn .input-data .inner.disabled {
+    background-color: rgba(0, 0, 0, 0.12) !important;
+    background: none;
+} 
+
+.submit-btn .input-data:hover .inner {
+    left: 0;
+}
+
+.submit-btn .input-data input {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.submit-btn .input-data input.disabled {
+    cursor: not-allowed;
+    opacity: .6;
+}
+
+.radio-group {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.radio-option label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+    display: none;
+}
+
+.custom-radio {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #6696ff;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.radio-option input[type="radio"]:checked + .custom-radio::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #6696ff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.message-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+.message-box.error {
+    background-color: #dc3545;
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        padding: 25px 20px 5px 20px;
+    }
+    .form-row {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .floating {
+        margin: 20px 0 20px 0;
+    }
+
+    .submit-btn .input-data {
+        overflow: hidden;
+        height: 30px;
+        width: 150px;
+    }
+}
